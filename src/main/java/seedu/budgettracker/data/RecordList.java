@@ -79,13 +79,13 @@ public class RecordList {
         hasBudget = false;
     }
 
-    public void deleteExpenditure(int index) {
+    public void deleteExpenditure(int index) throws IndexOutOfBoundsException {
         expenditureRecords.remove(index - 1);
         numberOfRecords -= 1;
         //assert getExpenditureListSize() == numberOfRecords;
     }
 
-    public void deleteLoan(int index) {
+    public void deleteLoan(int index) throws IndexOutOfBoundsException {
         loanRecords.remove(index - 1);
         numberOfRecords -= 1;
         //assert getLoanListSize() == numberOfRecords;
@@ -121,11 +121,11 @@ public class RecordList {
     //        return allExpenditure;
     //    }
 
-    public Expenditure getExpenditure(int index) {
+    public Expenditure getExpenditure(int index) throws IndexOutOfBoundsException {
         return expenditureRecords.get(index);
     }
 
-    public Loan getLoan(int index) {
+    public Loan getLoan(int index) throws IndexOutOfBoundsException {
         return loanRecords.get(index);
     }
 

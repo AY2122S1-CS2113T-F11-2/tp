@@ -156,12 +156,12 @@ public class AllRecordList {
         saveToStorage(storageDirectory);
     }
 
-    public void deleteExpenditure(int index, int month) {
+    public void deleteExpenditure(int index, int month) throws IndexOutOfBoundsException {
         allRecordList.get(month).deleteExpenditure(index);
         saveToStorage(storageDirectory);
     }
 
-    public void deleteLoan(int index, int month) {
+    public void deleteLoan(int index, int month) throws IndexOutOfBoundsException {
         allRecordList.get(month).deleteLoan(index);
         saveToStorage(storageDirectory);
     }
@@ -190,7 +190,7 @@ public class AllRecordList {
         return allRecordList.get(month).getLoanListSize();
     }
 
-    public Expenditure getExpenditure(int index, int month) {
+    public Expenditure getExpenditure(int index, int month) throws IndexOutOfBoundsException {
         return allRecordList.get(month).getExpenditure(index);
     }
 

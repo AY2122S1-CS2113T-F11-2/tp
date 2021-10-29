@@ -112,6 +112,8 @@ public class Parser {
             command = new InvalidCommand("Incorrect inputs!");
         } catch (EmptyDescriptionException e) {
             command = new InvalidCommand("Expenditure description is empty!");
+        } catch (IndexOutOfBoundsException e) {
+            command = new InvalidCommand("Error! Please ensure inputs are within valid range.");
         }
         return command;
     }
